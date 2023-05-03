@@ -14,7 +14,7 @@ function Video({ title, userImage, name, country, desc, btn1, btn2 }) {
                         {btn1}
                     </button>
                     <button className="primary ghost">
-                        {btn2}
+                        {btn2 === true ? 'following' : 'unfollow'}
                     </button>
                 </div>
                 <div className="skills">

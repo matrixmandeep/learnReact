@@ -1,13 +1,13 @@
 import './playButton.css'
 
-function PlayButton() {
+function PlayButton({ children, onClick }) {
     function HandleClick() {
-        console.log('jejeje');
+        onClick();
     }
-    
+
     return (
         <>
-            <button onClick={HandleClick}>Play</button>
+            <button onClick={HandleClick}>{children}</button>
         </>
     )
 }

@@ -4,7 +4,8 @@ import { userData } from "./utils/userData";
 // import Resume from './components/Resume/resume';
 import PlayButton from "./components/playButton";
 function App() {
-
+  let hello = 'plau';
+  let hello1 = 'plaulelelle';
   return (
     <>
       <div>
@@ -29,8 +30,8 @@ function App() {
         </div> */}
       </div >
       <div>
-        <PlayButton></PlayButton>
-        <PlayButton></PlayButton>
+        <PlayButton onClick={() => console.log(hello)}>Play</PlayButton>
+        <PlayButton onClick={() => alert(hello1)}>Pause</PlayButton>
       </div>
     </>
   );
