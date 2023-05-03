@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Video from "./components/video";
+import { userData } from "./utils/userData";
+// import Resume from './components/Resume/resume';
+import PlayButton from "./components/playButton";
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <h1>Props</h1>
+        <div className="userCards">
+          {userData.map((item) => (
+            <Video
+              key={item.id}
+              title={item.title}
+              userImage={item.userImage}
+              name={item.name}
+              country={item.country}
+              desc={item.desc}
+              btn1={item.btn1}
+              btn2={item.follow}
+            ></Video>
+          ))}
+        </div>
+
+        {/* <div id="resumeComponent">
+          <Resume />
+        </div> */}
+      </div >
+      <div>
+        <PlayButton></PlayButton>
+        <PlayButton></PlayButton>
+      </div>
+    </>
   );
 }
 

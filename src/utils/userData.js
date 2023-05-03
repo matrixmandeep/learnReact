@@ -1,0 +1,32 @@
+export const userData = [
+    {
+      id: 1,
+      title: "React Js",
+      userImage: "https://picsum.photos/130/130?image=856",
+      name: "user one",
+      country: "New York",
+      desc: "User interface designer and front-end developer",
+      btn1: "Message",
+      follow: true,
+    },
+    {
+      id: 2,
+      title: "Node Js",
+      userImage: "https://picsum.photos/130/130?image=816",
+      name: "user 2",
+      country: "India",
+      desc: "User interface designer and front-end developer",
+      btn1: "Message",
+      follow: false,
+    },
+    {
+      id: 3,
+      title: "Angular Js",
+      userImage: "https://picsum.photos/130/130?image=836",
+      name: "user 3",
+      country: "Canada",
+      desc: "User interface designer and front-end developer",
+      btn1: "Message",
+      follow: true,
+    },
+  ];
