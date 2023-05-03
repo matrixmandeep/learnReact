@@ -1,6 +1,11 @@
+import { useState } from 'react';
 import './video.css';
 
-function Video({ title, userImage, name, country, desc, btn1, btn2 }) {
+function Video({ title, userImage, name, country, desc, btn1, btn2, children }) {
+    const [follow, setFollow] = useState(btn2);
+    function handleClick() {
+        setFollow(!follow);
+    }
     return (
         <>
             <div className="card-container">
@@ -13,8 +18,8 @@ function Video({ title, userImage, name, country, desc, btn1, btn2 }) {
                     <button className="primary">
                         {btn1}
                     </button>
-                    <button className="primary ghost">
-                        {btn2 === true ? 'following' : 'unfollow'}
+                    <button className="primary ghost" onClick={handleClick}>
+                        {follow === true ? 'following' : 'unfollow'}
                     </button>
                 </div>
                 <div className="skills">
@@ -29,8 +34,10 @@ function Video({ title, userImage, name, country, desc, btn1, btn2 }) {
                         <li>Node</li>
                     </ul>
                 </div>
+            </div >
+            <div>
+                {children}
             </div>
-
         </>
     )
 }
